@@ -14,31 +14,14 @@ app.use(express.json());
 // app.use(cors());
 
 // // option 2: allow custom origins
-// const cors=require('cors')
-// app.use(
-//   cors({
-//     origin:['https://book-mern-sahilgupta.vercel.app'],
-//     methods:['GET','POST','PUT','DELETE'],
-//     credentials: true
-//   })
-// );
-
-
-import cors from 'cors';
-
-const corsOptions = {
-   origin: 'https://book-mern-sahilgupta.vercel.app',
-   methods: 'GET,PUT,POST,DELETE',
-   credentials: true,
-   optionsSuccessStatus: 204,
-};
-
-app.use(cors(corsOptions));
-
-
-
-
-
+const cors=require('cors')
+app.use(
+  cors({
+    origin:['https://book-mern-sahilgupta.vercel.app'],
+    methods:['GET','POST','PUT','DELETE'],
+    credentials: true
+  })
+);
 
 
 
