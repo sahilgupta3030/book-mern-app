@@ -22,10 +22,14 @@ app.use(
   })
 );
 
+// app.get("/", (request, response) => {
+//   console.log(request);
+//   return response.status(234).send("Happy to MERN stack tutorial..");
+// });
+
 app.get("/", (request, response) => {
-  console.log(request);
-  return response.status(234).send("Happy to MERN stack tutorial..");
-});
+ response.json("Everything is Fine.."); 
+})
 
 app.use("/books", booksRoute);
 
