@@ -14,14 +14,23 @@ app.use(express.json());
 // app.use(cors());
 
 // // option 2: allow custom origins
-const cors=require('cors')
-app.use(
-  cors({
-    origin:['https://book-mern-sahilgupta.vercel.app'],
-    methods:['GET','POST','PUT','DELETE'],
-    credentials: true
-  })
-);
+// const cors=require('cors')
+// app.use(
+//   cors({
+//     origin:['https://book-mern-sahilgupta.vercel.app'],
+//     methods:['GET','POST','PUT','DELETE'],
+//     credentials: true
+//   })
+// );
+
+
+import cors from "cors";
+const corsOrigin ={
+    origin:'https://book-mern-sahilgupta.vercel.app', //or whatever port your frontend is using
+    credentials:true,            
+    optionSuccessStatus:200
+}
+app.use(cors(corsOrigin));
 
 // app.get("/", (request, response) => {
 //   console.log(request);
