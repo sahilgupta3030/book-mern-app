@@ -10,11 +10,11 @@ import DeleteBook from "./pages/DeleteBook.jsx";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/books/create" element={<CreateBook />} />
-      <Route path="/books/details/:id" element={<ShowBook />} />
-      <Route path="/books/edit/:id" element={<EditBook />} />
-      <Route path="/books/delete/:id" element={<DeleteBook />} />
+      <Route path="https://book-mern-sahilgupta.vercel.app/" element={<Home />} />
+      <Route path="https://book-mern-sahilgupta.vercel.app/books/create" element={<CreateBook />} />
+      <Route path="https://book-mern-sahilgupta.vercel.app/books/details/:id" element={<ShowBook />} />
+      <Route path="https://book-mern-sahilgupta.vercel.app/books/edit/:id" element={<EditBook />} />
+      <Route path="https://book-mern-sahilgupta.vercel.app/books/delete/:id" element={<DeleteBook />} />
     </Routes>
   );
 };
