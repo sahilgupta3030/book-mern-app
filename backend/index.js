@@ -27,8 +27,8 @@ app.use(
 //   return response.status(234).send("Happy to MERN stack tutorial..");
 // });
 
-app.get("/", (request, response) => {
- response.json("Everything is Fine.."); 
+app.get("/", (req, res) => {
+ res.json("Everything is Fine.."); 
 })
 
 app.use("/books", booksRoute);
