@@ -28,12 +28,19 @@ import cors from 'cors';
 
 const corsOptions = {
    origin: 'https://book-mern-sahilgupta.vercel.app',
-   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+   methods: 'GET,PUT,POST,DELETE',
    credentials: true,
    optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
+
+
+
+
+
+
+
 
 // app.get("/", (request, response) => {
 //   console.log(request);
