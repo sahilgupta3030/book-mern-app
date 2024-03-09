@@ -18,7 +18,7 @@ app.use(
   cors({
     origin:'https://book-mern-sahilgupta.vercel.app/',
     methods:['GET','POST','PUT','DELETE'],
-    allowedHeaders:['Content-Type'],
+    credentials: true
   })
 );
 
