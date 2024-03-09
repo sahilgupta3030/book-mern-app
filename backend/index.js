@@ -24,13 +24,16 @@ app.use(express.json());
 // );
 
 
-import cors from "cors";
-const corsOrigin ={
-    origin:'https://book-mern-sahilgupta.vercel.app', //or whatever port your frontend is using
-    credentials:true,            
-    optionSuccessStatus:200
-}
-app.use(cors(corsOrigin));
+import cors from 'cors';
+
+const corsOptions = {
+   origin: 'https://book-mern-sahilgupta.vercel.app',
+   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+   credentials: true,
+   optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
 
 // app.get("/", (request, response) => {
 //   console.log(request);
