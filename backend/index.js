@@ -3,7 +3,7 @@ import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/book_model.js";
 import booksRoute from "./routes/booksRoute.js";
-// import cors from "cors";
+import cors from "cors";
 
 const app = express();
 // middleware for parsing Request Body
@@ -14,7 +14,6 @@ app.use(express.json());
 // app.use(cors());
 
 // // option 2: allow custom origins
-const cors=require('cors')
 app.use(
   cors({
     origin:['https://book-mern-sahilgupta.vercel.app'],
