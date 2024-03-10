@@ -14,13 +14,22 @@ app.use(express.json());
 // app.use(cors());
 
 // // option 2: allow custom origins
-app.use(
-  cors({
-    origin:['https://book-mern-sahilgupta.vercel.app'],
-    methods:['GET','POST','PUT','DELETE'],
-    credentials: true
-  })
-);
+// app.use(
+//   cors({
+//     origin:['https://book-mern-sahilgupta.vercel.app'],
+//     methods:['GET','POST','PUT','DELETE'],
+//     credentials: true
+//   })
+// );
+
+// 3rd opionnnnnnn
+// Use CORS middleware
+app.use(cors({ origin: 'https://book-mern-sahilgupta.vercel.app' }));
+const MY_CUSTOM_PORT = process.env.PORT || 3001;
+app.listen(MY_CUSTOM_PORT, () => {
+  console.log(`Server is running on port ${MY_CUSTOM_PORT}`);
+});
+
 
 
 
